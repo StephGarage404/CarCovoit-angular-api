@@ -1,0 +1,9 @@
+<div class="trip-list-container">
+    <h2>Liste des Trajets</h2>
+    <ul>
+      <li *ngFor="let trip of trips">
+        <a [routerLink]="['/trips', trip.id]">{{ trip.start }} - {{ trip.end }}</a>
+      </li>
+    </ul>
+  </div>
+  
