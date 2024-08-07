@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
-import { IUser } from '../models/user.model';
+import { User } from '../interface/user';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +13,7 @@ export class AuthService {
   constructor(private http: HttpClient) {}
 
   // Méthode pour l'inscription d'un utilisateur
-  register(user: IUser): Observable<any> {
+  register(user: User): Observable<any> {
     return this.http.post(`${this.apiUrl}/api/register`, user);
   }
 
@@ -41,7 +41,7 @@ export class AuthService {
   }
 
   // Méthode pour obtenir les informations de l'utilisateur connecté
-  getUser(): IUser | null {
+  getUser(): User | null {
     const user = localStorage.getItem('user');
     return user ? JSON.parse(user) : null;
   }
