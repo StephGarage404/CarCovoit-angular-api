@@ -1,8 +1,18 @@
-<nav>
-    <ul>
-      <li><a href="/" routerLinkActive="active" routerLink="/">accueil</a></li>
-      <li><a href="/login" routerLinkActive="active" routerLink="/login">login</a></li>
-      <li><a href="/register" routerLinkActive="active" routerLink="/register">register</a></li>
-    </ul>
+<nav class="bg-gray-800 p-4 shadow-lg">
+    <div class="container mx-auto flex justify-between items-center">
+      <div class="text-white font-bold text-xl">
+        BlaBlaDrive
+      </div>
+      <ul class="flex space-x-4">
+        <li>
+          <a routerLink="/" routerLinkActive="active" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Accueil</a>
+        </li>
+        <li>
+          <a routerLink="/login" routerLinkActive="active" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Login</a>
+        </li>
+        <li>
+          <a routerLink="/register" routerLinkActive="active" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Register</a>
+        </li>
+      </ul>
+    </div>
   </nav>
-  

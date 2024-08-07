@@ -1,20 +1,24 @@
-<div class="login-container">
+<div class="flex items-center justify-center min-h-screen bg-gray-100">
+  <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
+    <h2 class="text-2xl font-bold mb-6 text-center text-gray-800">Se connecter</h2>
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-      <div>
-        <label for="email">Email</label>
-        <input id="email" formControlName="email" type="email">
-        <div *ngIf="loginForm.controls.email.invalid && loginForm.controls.email.touched">
+      <div class="mb-4">
+        <label for="email" class="block text-gray-700 font-semibold mb-2">Email</label>
+        <input id="email" formControlName="email" type="email" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+        <div *ngIf="loginForm.controls.email.invalid && loginForm.controls.email.touched" class="text-red-500 text-sm mt-2">
           Email est requis et doit être valide.
         </div>
       </div>
-      <div>
-        <label for="password">Mot de passe</label>
-        <input id="password" formControlName="password" type="password">
-        <div *ngIf="loginForm.controls.password.invalid && loginForm.controls.password.touched">
+      <div class="mb-6">
+        <label for="password" class="block text-gray-700 font-semibold mb-2">Mot de passe</label>
+        <input id="password" formControlName="password" type="password" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+        <div *ngIf="loginForm.controls.password.invalid && loginForm.controls.password.touched" class="text-red-500 text-sm mt-2">
           Mot de passe est requis et doit contenir au moins 6 caractères.
         </div>
       </div>
-      <button type="submit" [disabled]="loginForm.invalid">Se connecter</button>
+      <button type="submit" [disabled]="loginForm.invalid" class="w-full bg-blue-500 text-white p-3 rounded-lg hover:bg-blue-600 transition duration-300">
+        Se connecter
+      </button>
     </form>
   </div>
-  
+</div>
