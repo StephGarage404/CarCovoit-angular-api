@@ -1,4 +1,4 @@
-<div class="relative bg-cover bg-center h-screen" style="background-image: url('assets/images/your-image.jpg');">
+<div class="relative bg-cover bg-center h-screen" style="background-image: url('/CarCovoit/src/app/images/VACANCE.jpg');">
     <div class="absolute inset-0 bg-black opacity-50"></div> <!-- Overlay sombre -->
   
     <div class="relative z-10 flex items-center justify-center h-full">
@@ -9,10 +9,9 @@
         <p class="text-lg sm:text-xl text-gray-300 mb-8">
           Trouvez ou proposez un covoiturage facilement et rapidement.
         </p>
-        <a href="/search" class="inline-block bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-md text-lg">
+        <button (click)="onSearchClick()" class="inline-block bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-md text-lg">
           Rechercher un trajet
-        </a>
+        </button>
       </div>
     </div>
   </div>
-  
